@@ -3,16 +3,16 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style: none;
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #171717;
+  background-color:#fff;
+  font-family: "Montserrat", sans-serif;
 }
 
 :root {
@@ -28,15 +28,10 @@ body {
 top: 0px
 }
 
-.grid {
-  display: grid;
-  
-}
 .logo-nav-container {
-  display: flex;
- 
-  /* align-items: center; */
-}
+  display:grid;
+  grid-template-columns:35% 35% 35%;
+  }
 
 .logo {
   padding-top: 10px;
@@ -44,53 +39,18 @@ top: 0px
   width: 10vw;
   height: 10vh;
 }
-
-.show {
-  font-size: .3vw;
-  padding-left: 50px;
+.cards{
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
-
-.show li a {
-  padding: 10px 15px;
+.grid-footer{
+  display:grid;
+  grid-template-columns:35% 35% 35%;
 }
-
-.show li:hover {
-  background-color: rgba(94, 150, 220, 0.53);
-   color: #fff;
+.row{
+  display:grid;
+  grid-template-columns:35% 35% 35%;
 }
-
-.show>li {
-  float: left;
-}
-
-.show li {
-  color: rgb(77, 111, 179);
-  padding-left: 1rem;
-
-}
-
-.show li ul {
-  display: none;
-}
-
-.show li:hover>ul {
-  display: block;
-}
-
-.show li ul li {
-  padding-top: 5px;
-}
-
-
-
-
-
-body {
-  background: var(--body);
-  transition: background 0.3s;
-  gap: 20px;
-}
-
 
 .theme-toggle {
   position: absolute;
@@ -108,13 +68,12 @@ body {
 }
 
 .card {
-  height: 240px;
-  width: 180px;
+  height: 50vh;
+  width: 300px;
   background-color: rgb(26, 66, 26);
-  /* background: var(--card); */
-  border-radius: 20px;
+   border-radius: 20px;
   padding: 10px;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   color: var(--text);
   flex-direction: column;
@@ -126,34 +85,50 @@ body {
 }
 .card img {
   height: 240px;
-  width: 180px;
+  width: 280px;
   border-radius: 20px;
   object-fit: cover;
 }
 .card__title {
-  color: goldenrod;
+  color: white;
+  margin-top: 8px;
+  text-shadow: 2px 2px 2px rgb(16, 16, 17);
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-weight:800;
+  transition: color 0.3s;
+}
+.card__title_detail {
   text-align: center;
-  margin-top: 16px;
-  text-shadow: 2px 2px 2px blue;
-  font-size: 15px;
-  font-weight: bold;
+  color: white;
+  margin-top: 8px;
+  text-shadow: 2px 2px 2px rgb(16, 16, 17);
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight:800;
   transition: color 0.3s;
 }
 .square{
+  margin-top: 10px;
+  padding:5px;
+  align-content: center;
   height: 140px;
   width: 160px;
   background-color:white;
 }
 .card__description {
-  color: green;
+  color: #0c231e;
   margin-top: 5px;
+  padding-left: 3px;
   display: block;
-  font-size: 15px;
+  font-size: .5em;
+  font-weight:800;
   opacity: 0.6;
   transition: color 0.3s;
 }
 .subtitle{
-  font-size: 8px;
+  padding: 3px;
+  font-size: .3em;
 }
 .card__shop {
   width: 100%;
@@ -162,26 +137,25 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.card__shop__price {
-  color: green;
-}
 .card__shop__action {
-  color: green;
-  font-size: 35px;
-  height: 40px;
+  color: #14322b;
+  font-size: 20px;
+  font-weight:800;
+  height: 29px;
   width: 180px;
   outline: none;
   border: none;
   background: white;
   border-radius: 22px;
   cursor: pointer;
-  margin-top: auto;
+  margin-top: 10px;
 }
 .card__shop__action span {
   color: #fff;
   font-size: 26px;
 }
 .card-large{
+  margin:10px;
   height: 350px;
    background-color: rgb(26, 66, 26);
   padding: 8px;
@@ -198,32 +172,44 @@ body {
   grid-auto-rows: minmax(auto);
 }
 .one {
+  line-height:5px;
+  text-align:justify;
   background-color:white;
   grid-column: 1 / 3;
   grid-row: 1;
   height: 80px;
 }
 .two {
+  text-align: center;
   background-color:white;
   grid-column: 3/ 4;
   grid-row: 1 / 4;
 }
 .three {
+  line-height:5px;
+  text-align:justify;
   background-color:white;
   grid-column: 1/ 3;
   grid-row: 2 ;
   height: 100px;
 }
 .four {
+  line-height:5px;
+  text-align:justify;
   background-color:white;
   grid-column: 1/3;
   grid-row: 3;
   height: 80px;
 }
 
-.footer{
+.footer-div{
   bottom: 0;
-  position: absolute;
-  width: 100%;
+  height: 25vh;
+    position: absolute;
   background: green;
+  width:100vw;
+}
+.footer{
+  display:grid;
+  grid-template-columns:25% 25% 25% 25%;
 }
